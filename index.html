@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planet defense</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body
+    class="relative flex justify-center items-center w-screen h-screen overflow-hidden bg-black"
+  >
+    <div class="relative">
+      <canvas class="rounded-md shadow-md"></canvas>
+
+      <span
+        class="absolute top-4 min-h-[2rem] right-8 select-none text-white text-xl font-medium border-b max-w-[15rem] min-w-[15rem]"
+        id="typedEl"
+      >
+      </span>
+    </div>
+
+    <div
+      class="w-screen z-10s absolute top-0 left-0 h-screen flex justify-center items-center bg-[#0000004d]"
+      id="modal"
+    >
+      <div class="bg-white p-6 min-w-[30rem] flex flex-col justify-start items-center rounded-md">
+        <h1 class="text-4xl font-semibold" id="score">0</h1>
+        <p class="uppercase font-medium">points</p>
+
+        <button
+          class="w-full rounded-md shadow bg-[#0060ca] hover:bg-[#0050b0] transition-all duration-200 hover:translate-y-[-3px] active:scale-95 text-white font-medium py-2 mt-3"
+          id="start-btn"
+        >
+          Start
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./utils.js"></script>
+    <script src="./objects/sprite.js"></script>
+    <script src="./objects/background.js"></script>
+    <script src="./objects/health.js"></script>
+    <script src="./objects/enemy.js"></script>
+    <script src="./objects/nairan.js"></script>
+    <script src="./objects/asteroid.js"></script>
+    <script src="./objects/projectile.js"></script>
+    <script src="./objects/player.js"></script>
+    <script src="./objects/planet.js"></script>
+    <script src="./objects/game.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
